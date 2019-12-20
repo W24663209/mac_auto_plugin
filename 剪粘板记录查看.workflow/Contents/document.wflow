@@ -21,6 +21,119 @@
 					<true/>
 					<key>Types</key>
 					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>访达</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>fileNames</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<key>ActionName</key>
+				<string>获得指定的访达项目</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array>
+						<string>~/Downloads/idea授权码</string>
+					</array>
+				</dict>
+				<key>ActionRuntimeParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array>
+						<string>~/Downloads/idea授权码</string>
+					</array>
+					<key>temporary items path</key>
+					<string>/var/folders/cz/31p0yqgs7ls9qq5l9fd7qn_00000gn/T/9FF6AB4D-0613-41B0-97C6-56CD75267F5B/1/com.apple.Automator.SpecifiedFiles</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.SpecifiedFiles</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>SpecifiedFilesAction</string>
+				<key>InputUUID</key>
+				<string>60D550AD-D294-426D-8267-52E6574A241E</string>
+				<key>Keywords</key>
+				<array>
+					<string>文件</string>
+					<string>选取</string>
+					<string>查找</string>
+					<string>获得</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>6D609756-0860-4BBF-A35A-A865DA33A58A</string>
+				<key>UUID</key>
+				<string>3EC71B69-A021-4C56-82C3-F88F48CF921B</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>408.500000:360.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
 						<string>com.apple.cocoa.string</string>
 					</array>
 				</dict>
@@ -60,154 +173,13 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>import sys
-import json
-import urllib.request
-import urllib.parse
-import execjs
-
-import tkinter.messagebox
+import tkinter
+import tkinter.messagebox #这个是消息框，对话框的关键
 
 
-class Py4Js():
-
-    def __init__(self):
-        self.ctx = execjs.compile(""" 
-        function TL(a) { 
-        var k = ""; 
-        var b = 406644; 
-        var b1 = 3293161072; 
-        var jd = "."; 
-        var $b = "+-a^+6"; 
-        var Zb = "+-3^+b+-f"; 
-     
-        for (var e = [], f = 0, g = 0; g &lt; a.length; g++) { 
-            var m = a.charCodeAt(g); 
-            128 &gt; m ? e[f++] = m : (2048 &gt; m ? e[f++] = m &gt;&gt; 6 | 192 : (55296 == (m &amp; 64512) &amp;&amp; g + 1 &lt; a.length &amp;&amp; 56320 == (a.charCodeAt(g + 1) &amp; 64512) ? (m = 65536 + ((m &amp; 1023) &lt;&lt; 10) + (a.charCodeAt(++g) &amp; 1023), 
-            e[f++] = m &gt;&gt; 18 | 240, 
-            e[f++] = m &gt;&gt; 12 &amp; 63 | 128) : e[f++] = m &gt;&gt; 12 | 224, 
-            e[f++] = m &gt;&gt; 6 &amp; 63 | 128), 
-            e[f++] = m &amp; 63 | 128) 
-        } 
-        a = b; 
-        for (f = 0; f &lt; e.length; f++) a += e[f], 
-        a = RL(a, $b); 
-        a = RL(a, Zb); 
-        a ^= b1 || 0; 
-        0 &gt; a &amp;&amp; (a = (a &amp; 2147483647) + 2147483648); 
-        a %= 1E6; 
-        return a.toString() + jd + (a ^ b) 
-    }; 
-     
-    function RL(a, b) { 
-        var t = "a"; 
-        var Yb = "+"; 
-        for (var c = 0; c &lt; b.length - 2; c += 3) { 
-            var d = b.charAt(c + 2), 
-            d = d &gt;= t ? d.charCodeAt(0) - 87 : Number(d), 
-            d = b.charAt(c + 1) == Yb ? a &gt;&gt;&gt; d: a &lt;&lt; d; 
-            a = b.charAt(c) == Yb ? a + d &amp; 4294967295 : a ^ d 
-        } 
-        return a 
-    } 
-    """)
-
-    def getTk(self, text):
-        return self.ctx.call("TL", text)
-
-
-def open_url(url):
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
-    req = urllib.request.Request(url=url, headers=headers)
-    response = urllib.request.urlopen(req)
-    data = response.read().decode('utf-8')
-    return data
-
-
-def buildUrl(content, tk, tl):
-    baseUrl = 'http://translate.google.cn/translate_a/single'
-    baseUrl += '?client=t&amp;'
-    baseUrl += 'sl=auto&amp;'
-    baseUrl += 'tl=' + str(tl) + '&amp;'
-    baseUrl += 'hl=zh-CN&amp;'
-    baseUrl += 'dt=at&amp;'
-    baseUrl += 'dt=bd&amp;'
-    baseUrl += 'dt=ex&amp;'
-    baseUrl += 'dt=ld&amp;'
-    baseUrl += 'dt=md&amp;'
-    baseUrl += 'dt=qca&amp;'
-    baseUrl += 'dt=rw&amp;'
-    baseUrl += 'dt=rm&amp;'
-    baseUrl += 'dt=ss&amp;'
-    baseUrl += 'dt=t&amp;'
-    baseUrl += 'ie=UTF-8&amp;'
-    baseUrl += 'oe=UTF-8&amp;'
-    baseUrl += 'clearbtn=1&amp;'
-    baseUrl += 'otf=1&amp;'
-    baseUrl += 'pc=1&amp;'
-    baseUrl += 'srcrom=0&amp;'
-    baseUrl += 'ssel=0&amp;'
-    baseUrl += 'tsel=0&amp;'
-    baseUrl += 'kc=2&amp;'
-    baseUrl += 'tk=' + str(tk) + '&amp;'
-    baseUrl += 'q=' + content
-    return baseUrl
-
-
-def translate(text, tk, tl, texts):
-    # content是要翻译的内容
-    content = urllib.parse.quote(text)
-    url = buildUrl(content, tk, tl)
-
-    result = open_url(url)
-    res_json = json.loads(result)
-    trans_text = res_json[0][0][0]
-    # 去除读取文字中前后的换行符和逗号及单引号或双引号
-    original = text.strip("\n").strip(",").strip("'").strip('"')
-    translate = trans_text.strip(",").strip("'").strip('"')
-    texts += translate + '\n'
-    return texts
-
-
-# 检验是否全是中文字符
-def is_all_chinese(strs):
-    for _char in strs:
-        if not '\u4e00' &lt;= _char &lt;= '\u9fff':
-            return False
-    return True
-
-
-def main(text):
-    js = Py4Js()
-    tk = js.getTk(text)
-    texts = ""
-    texts = translate(text, tk, 'en', texts) + "\n"
-    texts = translate(text, tk, 'zh-cn', texts)
-    return texts
-
-for f in sys.argv[1:]:
-# if __name__ == '__main__':
-
-    text = ''
-    befor = ''
-    for i, v in enumerate(f):
-    # for i, v in enumerate('fsdgfjhsdgfjj'):
-        if v == '_':
-            text += ' '
-            befor = 0
-            continue
-        if ord(v) &gt;= 65 and ord(v) &lt;= 90:
-            if befor != '' and befor != 0 and ord(befor) &gt;= 65 and ord(befor) &lt;= 90:  # 连续大写跳过
-                text += v
-                continue
-            text += ' ' + v
-        else:
-            text += v
-        befor = v
-        print(text)
-    texts = main(text)
-    tkinter.Tk().withdraw()
-    tkinter.messagebox.showinfo(message=texts)
-</string>
+for fileName in sys.argv[1:]:
+    with open(fileName, 'r') as f:
+        tkinter.messagebox.showinfo('剪粘板记录', f.read(),)</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -216,6 +188,28 @@ for f in sys.argv[1:]:
 					<string>/usr/bin/python</string>
 					<key>source</key>
 					<string></string>
+				</dict>
+				<key>ActionRuntimeParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string>import sys
+import tkinter
+import tkinter.messagebox #这个是消息框，对话框的关键
+
+
+for fileName in sys.argv[1:]:
+    with open(fileName, 'r') as f:
+        tkinter.messagebox.showinfo('剪粘板记录', f.read(),)</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>1</integer>
+					<key>shell</key>
+					<string>/usr/bin/python</string>
+					<key>source</key>
+					<string></string>
+					<key>temporary items path</key>
+					<string>/var/folders/cz/31p0yqgs7ls9qq5l9fd7qn_00000gn/T/9FF6AB4D-0613-41B0-97C6-56CD75267F5B/1/com.apple.RunShellScript</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
@@ -231,8 +225,10 @@ for f in sys.argv[1:]:
 				</array>
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
+				<key>IgnoresInput</key>
+				<false/>
 				<key>InputUUID</key>
-				<string>664EBFF0-67FE-4510-B16D-B2CC397D6158</string>
+				<string>1ED9AAE3-957C-4017-8E82-3B006A59A4FB</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -242,9 +238,11 @@ for f in sys.argv[1:]:
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>E087FEDA-FB79-4DC4-9F2E-73D952F41C51</string>
+				<string>AF47D4C2-84BD-4285-A87B-C9457B5D2E27</string>
+				<key>ShowWhenRun</key>
+				<false/>
 				<key>UUID</key>
-				<string>B6A572C4-A816-44B1-B132-42B3FCBE9A3D</string>
+				<string>AC07857E-E55D-44E0-B05C-1FB62130E52D</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -317,10 +315,12 @@ for f in sys.argv[1:]:
 						<string>4</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>408.500000:305.000000</string>
+				<string>408.500000:594.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -329,7 +329,15 @@ for f in sys.argv[1:]:
 		</dict>
 	</array>
 	<key>connectors</key>
-	<dict/>
+	<dict>
+		<key>3389B8D7-E358-4339-9AB1-D44DB88A6F49</key>
+		<dict>
+			<key>from</key>
+			<string>3EC71B69-A021-4C56-82C3-F88F48CF921B - 3EC71B69-A021-4C56-82C3-F88F48CF921B</string>
+			<key>to</key>
+			<string>AC07857E-E55D-44E0-B05C-1FB62130E52D - AC07857E-E55D-44E0-B05C-1FB62130E52D</string>
+		</dict>
+	</dict>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>applicationBundleIDsByPath</key>
@@ -339,7 +347,7 @@ for f in sys.argv[1:]:
 		<key>inputTypeIdentifier</key>
 		<string>com.apple.Automator.text</string>
 		<key>outputTypeIdentifier</key>
-		<string>com.apple.Automator.nothing</string>
+		<string>com.apple.Automator.text</string>
 		<key>presentationMode</key>
 		<integer>11</integer>
 		<key>processesInput</key>
@@ -347,7 +355,7 @@ for f in sys.argv[1:]:
 		<key>serviceInputTypeIdentifier</key>
 		<string>com.apple.Automator.text</string>
 		<key>serviceOutputTypeIdentifier</key>
-		<string>com.apple.Automator.nothing</string>
+		<string>com.apple.Automator.text</string>
 		<key>serviceProcessesInput</key>
 		<integer>0</integer>
 		<key>systemImageName</key>

@@ -239,7 +239,7 @@ pyperclip.copy(urls)
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>301.500000:305.000000</string>
+				<string>769.000000:305.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -374,7 +374,7 @@ pyperclip.copy(urls)
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>301.500000:494.000000</string>
+				<string>769.000000:494.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -496,7 +496,7 @@ pyperclip.copy(urls)
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>301.500000:660.000000</string>
+				<string>769.000000:660.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Text.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -506,14 +506,14 @@ pyperclip.copy(urls)
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>26AE88D9-804C-4A6A-A4FA-283C5A8984C8</key>
+		<key>220C4D1C-F1A5-4480-B10E-F360AD8C20E4</key>
 		<dict>
 			<key>from</key>
 			<string>1E725498-7CFD-4D19-8963-E06349FE988E - 1E725498-7CFD-4D19-8963-E06349FE988E</string>
 			<key>to</key>
 			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
 		</dict>
-		<key>5023D834-227A-43EA-927A-5016AFF737E3</key>
+		<key>C53A1783-C0BB-42C4-8AB4-5265F95D6819</key>
 		<dict>
 			<key>from</key>
 			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
@@ -526,15 +526,15 @@ pyperclip.copy(urls)
 		<key>applicationPaths</key>
 		<array/>
 		<key>inputTypeIdentifier</key>
-		<string>com.apple.Automator.fileSystemObject</string>
+		<string>com.apple.Automator.nothing</string>
 		<key>outputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>presentationMode</key>
-		<integer>15</integer>
+		<integer>11</integer>
 		<key>processesInput</key>
 		<integer>0</integer>
 		<key>serviceInputTypeIdentifier</key>
-		<string>com.apple.Automator.fileSystemObject</string>
+		<string>com.apple.Automator.nothing</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>

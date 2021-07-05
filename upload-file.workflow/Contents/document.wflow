@@ -97,7 +97,7 @@ def upload(file_path):
     client.fput_object(bucket_name=bucket, object_name=file_name,
                        part_size=5 * 1024 * 1024,
                        file_path=file_path, )
-    return '%s/%s' % (bucket, file_name)
+    return '%s/%s/%s' % ('https://oss.bensun.cn/download',bucket, file_name)
 
 
 urls = ''
@@ -125,8 +125,7 @@ else:
         urls = upload(f)
 
 # 复制上传后的图片地址
-pyperclip.copy(urls)
-</string>
+pyperclip.copy(urls)</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -506,16 +505,16 @@ pyperclip.copy(urls)
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>220C4D1C-F1A5-4480-B10E-F360AD8C20E4</key>
+		<key>57337E62-B306-41C0-A75D-AE2D1E9C508A</key>
+		<dict>
+			<key>from</key>
+			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
+		</dict>
+		<key>B3CF7D9B-01F1-4A20-BBE9-A015522EEBB9</key>
 		<dict>
 			<key>from</key>
 			<string>1E725498-7CFD-4D19-8963-E06349FE988E - 1E725498-7CFD-4D19-8963-E06349FE988E</string>
 			<key>to</key>
-			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
-		</dict>
-		<key>C53A1783-C0BB-42C4-8AB4-5265F95D6819</key>
-		<dict>
-			<key>from</key>
 			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
 		</dict>
 	</dict>

@@ -97,7 +97,7 @@ def upload(file_path):
     client.fput_object(bucket_name=bucket, object_name=file_name,
                        part_size=5 * 1024 * 1024,
                        file_path=file_path, )
-    return '%s/%s/%s' % ('https://oss.bensun.cn/download',bucket, file_name)
+    return '%s/%s' % ('https://oss.bensun.cn/download', file_name)
 
 
 urls = ''
@@ -505,16 +505,16 @@ pyperclip.copy(urls)</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>57337E62-B306-41C0-A75D-AE2D1E9C508A</key>
-		<dict>
-			<key>from</key>
-			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
-		</dict>
-		<key>B3CF7D9B-01F1-4A20-BBE9-A015522EEBB9</key>
+		<key>A362B8B0-E7DD-4DBC-964D-90911B2525EC</key>
 		<dict>
 			<key>from</key>
 			<string>1E725498-7CFD-4D19-8963-E06349FE988E - 1E725498-7CFD-4D19-8963-E06349FE988E</string>
 			<key>to</key>
+			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
+		</dict>
+		<key>CEBDC4F5-51B0-4BDD-95CC-7912CAC8C808</key>
+		<dict>
+			<key>from</key>
 			<string>8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E - 8155C1A4-E2C4-4F92-A5CA-9829A15C0F7E</string>
 		</dict>
 	</dict>
